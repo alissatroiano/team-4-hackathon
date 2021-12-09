@@ -37,6 +37,7 @@
 
 --- 
 ### ***Non-Christmas themed inspirational quotes***
+
 * "You can still make something beautiful and something powerful out of a really bad situation" - **Gabe Grunewald**
 * "Out of the mountain of despair, a stone of hope" - **Martin Luther King Jr**
 * "Keep your face always toward the sunshine, and the shadows will fall behind you" - **Walt Whitman**
@@ -63,6 +64,7 @@
 ---
 
 ### ***Christmas GIFs***
+
 * [Obama & Santa](https://giphy.com/gifs/betnetworks-3oEjHP1InML0C6ZFle)
 * [Santa dog running](https://giphy.com/gifs/cute-animal-mood-9JrvLb0fnrn7k1ZjhX)
 * [Christmas Drake](https://giphy.com/gifs/holiday-cheer-spreading-10ZlYZwdw2tpWo)
