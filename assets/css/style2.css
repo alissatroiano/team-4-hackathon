@@ -1,0 +1,8 @@
+body {
+    background: url('/images/snowflakes.png') no-repeat center center;
+    height: 100%;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
