@@ -24,6 +24,27 @@ img {
 }
 
 /* Center section styling */
+
+.center-section {
+    position: relative;
+    font-size: 36px;
+    margin-left: 25px;
+    margin-top: 250px;
+}
+
+.h1 {
+    font-weight: 400;
+    color: white
+}
+
+a {
+    color: #f8f9fa;
+}
+
+.btn {
+    font-size: 2rem;
+}
+
 /* Advent calendar grid */
 
 .calendar-container {
