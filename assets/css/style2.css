@@ -1,0 +1,30 @@
+body {
+    background: url('/images/snowflakes.png') no-repeat center center;
+    height: 100%;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Header styling */
+
+.header-container {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#header-img img {
+    vertical-align: middle;
+    border-style: none;
+    height: 40px;
+}
+
+/* Footer styling */
+
+
