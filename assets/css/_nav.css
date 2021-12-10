@@ -1,0 +1,76 @@
+header {
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+}
+
+
+/* Header styling */
+
+
+/* .header-container {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+} */
+
+.logo {
+    text-decoration: none;
+    color: #3e3d3d;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+
+/* .navbar {
+    background-image: linear-gradient(180deg, #5793A9, #91C3D0); 
+} */
+
+.navbar-brand {
+    letter-spacing: 0.2rem;
+}
+
+.nav-item {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-img img {
+    vertical-align: middle;
+    height: 60px;
+    list-style: none;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: var(--primary-colour);
+}
+
+
+/* Footer styling */
+
+
+/* Hero styling */
+
+.hero {
+    position: relative;
+    background: url(../images/flakes3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    color: var(--nav-colour) !important;
+    text-transform: uppercase;
+}
+
+#navmenu {
+    color: #3e3d3d !important;
+}
