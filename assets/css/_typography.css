@@ -15,3 +15,7 @@ h1 {
 h1.home {
     color: white;
 }
+
+.navbar {
+    font-family: 'Risque', cursive;
+}
