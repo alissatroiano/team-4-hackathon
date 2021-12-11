@@ -7,5 +7,11 @@
 }
 
 body {
-    background: #901B11;
+    background: url(../images/flakes3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
 }
