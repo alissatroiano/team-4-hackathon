@@ -1,0 +1,40 @@
+label {
+    display: inline-block;
+    padding: 16px;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid #c5a880;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    background-color: #161616;
+    border-radius: 10px;
+    color: #c5a880;
+    border: 1px solid #c5a880;
+    padding: 16px;
+    width: 300px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    color: var(--primary-colour-hover) !important;
+}
+
+.text-loading {
+    color: var(--background-colour) !important;
+}

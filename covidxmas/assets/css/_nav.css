@@ -1,0 +1,75 @@
+.header {
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+}
+
+.logo {
+    text-decoration: none;
+    color: #3e3d3d;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+
+/* .navbar {
+    background-image: linear-gradient(180deg, #5793A9, #91C3D0); 
+} */
+
+.navbar-brand {
+    letter-spacing: 0.2rem;
+    color: var(--nav-colour) !important;
+    font-weight: 600;
+}
+
+.nav-item {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-img img {
+    vertical-align: middle;
+    height: 80px;
+    list-style: none;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link .music-icon {
+    color: var(--primary-colour) !important;
+}
+
+.dropdown-item {
+    color: var(--primary-colour-hover) !important;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+/* .navbar {
+    text-transform: uppercase;
+} */
+
+.active .nav-link:hover {
+    background-color: color: var(--primary-colour);
+    color: black !important;
+}
+
+.dropdown-menu {
+    border: 0;
+    background: transparent;
+}
+
+
+/* .bg-light {
+    background-color: transparent;
+} */
+
+
+/* #navmenu {
+    color: #3e3d3d !important;
+} */
+
+a.nav-link {
+    color: var(--primary-colour) !important;
+}
