@@ -1,0 +1,21 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Risque', cursive;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: var(--menu-colour);
+}
+
+h1.home {
+    color: white;
+}
+
+.navbar {
+    font-family: 'Risque', cursive;
+}

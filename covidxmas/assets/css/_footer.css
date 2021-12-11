@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    background-color: var(--nav-colour);
+    margin-top: 2rem;
+    font-size: 0.8em;
+    color: #8d8d8d;
+    padding: 0.5em;
+}
+
+footer a {
+    color: #8d8d8d;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer i {
+    color: white;
+    font-size: 1em;
+}
