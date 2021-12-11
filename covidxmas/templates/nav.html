@@ -1,16 +1,17 @@
 {% load static %}
 
-<header class=" wrapper text-dark ">
-
+<header class="wrapper text-dark ">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
         <div class="container menu">
             <div class="header-img navbar-brand">
                 <img src="{% static 'images/xmaslogo.png' %}" alt="covidXmas logo ">
                 <a href="index.html " class="navbar-brand ">covidXmas</a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto menu mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -29,14 +30,19 @@
                         <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
                     </li>
                     <li class="nav-item dropdown mr-5">
-                        <a class="nav-link dropdown-toggle title ml-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle title ml-5" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-music music-icon"></i> Play Music
                         </a>
                         <ul class="dropdown-menu music overlay " id="overlay" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item play" id=" btnA " type="button " href="#btnB">Snowflakes Falling Down by Simon Panrucker</a></li>
-                            <li><a class="dropdown-item play" id=" btnB " type="button " href="#btnB">This Christmas by Dott</a></li>
-                            <li><a class="dropdown-item play" id="btnC" type="button" href="#btnC">No room at the inn by TRG Banks</a></li>
-                            <li><a class="dropdown-item play" id="btnD" type="button" href="#btnD">Jingle Bell Swing by Mark Smeby</a></li>
+                            <li><a class="dropdown-item play" id=" btnA " type="button " href="#btnB">Snowflakes Falling
+                                    Down by Simon Panrucker</a></li>
+                            <li><a class="dropdown-item play" id=" btnB " type="button " href="#btnB">This Christmas by
+                                    Dott</a></li>
+                            <li><a class="dropdown-item play" id="btnC" type="button" href="#btnC">No room at the inn by
+                                    TRG Banks</a></li>
+                            <li><a class="dropdown-item play" id="btnD" type="button" href="#btnD">Jingle Bell Swing by
+                                    Mark Smeby</a></li>
                             <li>
                                 <p class="text-center py-2">OR</p>
                             </li>

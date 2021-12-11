@@ -1,0 +1,22 @@
+{% extends 'base_template.html' %}
+
+
+{% block content %}
+
+{% if formset %}
+<div class="overlay"></div>
+
+<section class="mt-5 pt-5">
+	<div class="calendar-container">
+		{% for form in formset %}
+		<div class="day day{{ forloop.counter }}">
+			<div class="cover cover{{ forloop.counter }}">{{ forloop.counter }}
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+
+{% endif %}
+
+{% endblock %}
