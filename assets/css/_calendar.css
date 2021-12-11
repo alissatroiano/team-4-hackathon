@@ -97,7 +97,8 @@
 .day8,
 .day14,
 .day6,
-.day21{
+.day21,
+.codein{
     grid-column: span 2;
     grid-row: span 1;
 }
@@ -158,7 +159,8 @@
 .cover8,
 .cover14,
 .cover6,
-.cover21{
+.cover21,
+.coverCI{
     grid-column: span 2;
     grid-row: span 1;
     background-color: green;
@@ -169,6 +171,8 @@
     justify-content: center;
 }
 
-.coverteam {
+.coverteam,
+.coverCI {
     font-size: 1em;
+    text-align: center;
 }
