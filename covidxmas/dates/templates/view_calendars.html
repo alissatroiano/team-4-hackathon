@@ -1,0 +1,52 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+<!--Calendar Section-->
+<section class="calendar mt-5 pt-5">
+	<!--container-->
+	<div class="container">
+		<!--row-->
+		<div class="row">
+			<!--col-12-->
+			{% if user.calendars %}
+			<div class="col-12 mt-3 pt-3">
+				<h1 class="text-center">{{ user }}'s Calendars</h1>
+			</div>
+			{% endif %}
+			<!--/col-12-->
+		</div>
+		<!--/row-->
+		<!--calendars-display-row-->
+		<div class="row">
+			<!--col-xs-8.col-md-4-->
+			{% if user.calendars %}
+			{% for calendar in calendars %}
+			<div class="col-xs-8 col-md-4 my-3">
+				<!--calendar-display-->
+				<div class="card">
+					<div class="card-title">
+						<h1>{{ calendar.name }}</h1>
+					</div>
+					<div class="card-body">
+						<div class="row text-center">
+							<p>{{ calendar.days }} days</p>
+						</div>
+						<div class="row justify-content-center">
+							<button class="btn btn-sm" style="width: fit-content;">
+								<a class="btn-text">Edit Calendar</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			{% endif %}
+			<!--/col-xs-8.col-md-4-->
+		</div>
+		<!--/calendars-display-row-->
+	</div>
+	<!--row-->
+	</div>
+	<!--/container-->
+</section>
+<!--./Calendar-Section-->
+{% endblock %}

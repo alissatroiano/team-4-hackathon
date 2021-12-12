@@ -4,17 +4,23 @@
 {% block content %}
 
 {% if formset %}
-<div class="overlay"></div>
-
 <section class="mt-5 pt-5">
-	<div class="calendar-container">
+	<div class="calendar-container container">
 		{% for form in formset %}
-		<div class="day day{{ forloop.counter }}">
+		<div class="card day day{{ forloop.counter }}">
+
 			<div class="cover cover{{ forloop.counter }}">{{ forloop.counter }}
 			</div>
+			<div>
+				<span>{{ form.date }}</span>
+				<span>{{ form.gift }}</span>
+				<span>{{ form.content }}</span>
+			</div>
 		</div>
+		<!--./day-->
 		{% endfor %}
 	</div>
+	<!--./end-calendar-container-->
 </section>
 
 {% endif %}
