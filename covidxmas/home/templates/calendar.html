@@ -6,14 +6,18 @@
     <section>
         <div class="calendar-container">
             {% for day in calendar.dates.all %}
+            {% if day.can_be_opened %}
             <div class="day day{{forloop.counter}}" data-gift="{{day.gift}}" data-content="{{day.content}}">
+            {% else %}
+            <div class="day day{{forloop.counter}} inactive-day" title="This window can only be opened on the {{day.date}} of December.">
+            {% endif %}
                 <div class="cover cover{{forloop.counter}}">
                     {{forloop.counter}}
                 </div>
             </div>
             {% endfor %}
-            <div class="day team">
-                <div class="cover coverteam">Team Calendarers</div>
+            <div class="day team" data-gift="1" data-content="{% static 'images/team_logo.png' %}">
+                <div class="cover coverteam text-center">Team Calendarers</div>
             </div>
         </div>
     </section>
@@ -32,7 +36,7 @@
 
 {% block extra_js %}
 <script>
-    $('.day').click(function(){
+    $('.day:not(".inactive-day")').click(function(){
         let gift = $(this).data('gift');
         let content = $(this).data('content');
         if(content != 'None') {
