@@ -5,84 +5,63 @@
     <!-- Advent calendar grid section-->
     <section>
         <div class="calendar-container">
-            <div class="day day1">
-                <div class="cover cover1">1</div>
+            {% for day in calendar.dates.all %}
+            <div class="day day{{forloop.counter}}" data-gift="{{day.gift}}" data-content="{{day.content}}">
+                <div class="cover cover{{forloop.counter}}">
+                    {{forloop.counter}}
+                </div>
             </div>
-            <div class="day day2">
-                <div class="cover cover1">2</div>
-            </div>
-            <div class="day day3">
-                <div class="cover cover3">3</div>
-            </div>
-            <div class="day day4">
-                <div class="cover cover4">4</div>
-            </div>
-            <div class="day day5">
-                <div class="cover cover5">5</div>
-            </div>
-            <div class="day day6">
-                <div class="cover cover6">6</div>
-            </div>
-            <div class="day day7">
-                <div class="cover cover7">8</div>
-            </div>
-            <div class="day day8">
-                <div class="cover cover8">8</div>
-            </div>
-            <div class="day day9">
-                <div class="cover cover9">9</div>
-            </div>
-            <div class="day day10">
-                <div class="cover cover10">10</div>
-            </div>
-            <div class="day day11">
-                <div class="cover cover11">11</div>
-            </div>
-            <div class="day day12">
-                <div class="cover cover12">12</div>
-            </div>
-            <div class="day day13">
-                <div class="cover cover13">13</div>
-            </div>
-            <div class="day day14">
-                <div class="cover cover14">14</div>
-            </div>
-            <div class="day day15">
-                <div class="cover cover15">15</div>
-            </div>
-            <div class="day day16">
-                <div class="cover cover16">16</div>
-            </div>
-            <div class="day day17">
-                <div class="cover cover17">17</div>
-            </div>
-            <div class="day day18">
-                <div class="cover cover18">18</div>
-            </div>
-            <div class="day day19">
-                <div class="cover cover19">19</div>
-            </div>
-            <div class="day day20">
-                <div class="cover cover20">20</div>
-            </div>
-            <div class="day day21">
-                <div class="cover cover21">21</div>
-            </div>
-            <div class="day day22">
-                <div class="cover cover22">22</div>
-            </div>
-            <div class="day day23">
-                <div class="cover cover23">23</div>
-            </div>
-            <div class="day day24">
-                <div class="cover cover24">24</div>
-            </div>
-            <div class="day day25">
-                <div class="cover cover25">25</div>
-            </div>
+            {% endfor %}
             <div class="day team">
                 <div class="cover coverteam">Team Calendarers</div>
             </div>
         </div>
     </section>
+
+
+    <div class="modal fade" id="showCalendarDay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+                <h3>Ho, Ho, Ho! Merry Christmas!</h3>
+            </div>
+          </div>
+        </div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    $('.day').click(function(){
+        let gift = $(this).data('gift');
+        let content = $(this).data('content');
+        if(content != 'None') {
+            switch(gift){
+            case 1:
+                console.log(gift == 1)
+                // For an image we create a new img tag
+                // and render it in the modal
+                let _img = $(`<img src="${content}">`);
+                _img.css({'width':'100%'});
+                $('#showCalendarDay .modal-body').html(_img);
+                break;
+            case 2:
+                let video = `<iframe width="100%" height="315" src="${content}"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>`;
+                $('#showCalendarDay .modal-body').html(video);
+                break;
+            case 3:
+                $('#showCalendarDay .modal-body').html(`<h3>${content}</h3>`);
+                break;
+            default:
+                $('#showCalendarDay .modal-body').html(`<h3>${content}</h3>`)
+                break;
+
+            }
+        }
+        $('#showCalendarDay').modal('toggle')
+    })
+</script>
 {% endblock %}
