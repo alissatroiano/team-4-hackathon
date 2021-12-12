@@ -23,7 +23,12 @@
 
 .day{
     z-index: 1;
-    background-color: #f5f5f5;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/gift.svg);
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-size: contain;
+    background-position: center center;
+    cursor: pointer;
 }
 
 /* Calendar tile styling */
@@ -72,7 +77,7 @@
 .day16,
 .day10,
 .day18,
-.day13,{
+.day13 {
     grid-column: span 1;
     grid-row: span 2;
     background-color: purple;
