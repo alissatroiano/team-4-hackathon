@@ -3,6 +3,10 @@
 
 {% block content %}
 
-{{ form.as_table }}
+{% if formset %}
+{% for form in formset %}
+
+{% endfor %}
+{% endif %}
 
 {% endblock %}

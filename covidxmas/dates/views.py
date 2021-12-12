@@ -1,9 +1,11 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.core.files.base import ContentFile
+from django.db.models.fields import PositiveBigIntegerField
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 from django.forms.models import modelformset_factory
 from .models import Date, Calendar
-from .forms import DateForm
+from .forms import CalendarForm, DateForm
 
 # Create your views here.
 def create_calendar(request):
@@ -21,15 +23,21 @@ def view_calendars(request):
     return render(request, 'view_calendars.html', {'calendars': calendars})
 
 
+# The edit calendar view is currently broken :(
 @login_required
 def edit_calendar(request, calendar_id):
     """ A view to edit an existing calendar """
     calendar = get_object_or_404(Calendar, pk=calendar_id)
     
     if request.method == 'POST':
-        form = DateForm(request.POST, instance=calendar)
-        if form.is_valid():
-            form.save()
-            return redirect('view_calendars')
+        formset = CalendarForm(request.PositiveBigIntegerField, request.POST, instance=calendar)
+        if formset.is_valid():
+            formset.save()
+            return redirect(reverse('view_calendars'))
     
-    return render(request, 'edit_calendar.html', {'calendar': calendar})
+    context = {
+        'formset': formset,
+        'calendar': calendar,
+    }
+    
+    return render('edit_calendar.html', request, context)

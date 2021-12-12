@@ -1,0 +1,28 @@
+.btn-text {
+	color: #fafafa;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #000;
+}
+
+a:hover {
+	color: #fafafa;
+	text-decoration: none;
+}
+
+.btn:hover {
+	background-color: rgba(233, 15, 37, 0.749);
+	backdrop-filter: blur(20px);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-title {
+	text-align: center;
+}
+
+.card-body {
+	text-align: center;
+}
