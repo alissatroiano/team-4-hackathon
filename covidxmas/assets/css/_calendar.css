@@ -77,7 +77,7 @@
 .day16,
 .day10,
 .day18,
-.day13,{
+.day13 {
     grid-column: span 1;
     grid-row: span 2;
     background-color: purple;

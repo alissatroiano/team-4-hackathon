@@ -1,11 +1,11 @@
 {% load static %}
 
 <header class="wrapper text-dark ">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container menu">
             <div class="header-img navbar-brand">
                 <img src="{% static 'images/xmaslogo.png' %}" alt="covidXmas logo ">
-                <a href="index.html " class="navbar-brand ">covidXmas</a>
+                <a href="{% url 'home' %} " class="navbar-brand ">covidXmas</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -20,18 +20,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'calendar' %}">Calendar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'create_calendar' %}">Create Calendar</a>
-                    </li>
+                    {% if not request.user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'view_calendars' %}">My Calendars</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
                     </li>
+                    {% endif %}
                     <li class="nav-item dropdown mr-5">
                         <a class="nav-link dropdown-toggle title ml-5" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">

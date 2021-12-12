@@ -28,14 +28,13 @@ class Calendar(models.Model):
 class Date(models.Model):
     
     class Meta:
-        unique_together = ('name', 'parent',) 
         verbose_name_plural = 'Calendar Dates'
 
-    calendar = models.OneToOneField(Calendar, related_name='dates',
-                                    on_delete=models.CASCADE)
+    calendar = models.ForeignKey(Calendar, related_name='dates',
+                                 on_delete=models.CASCADE)
     gift = models.CharField(max_length=254, choices=GIFT, default='1')
     date = models.IntegerField()
-    content = models.TextField(max_length=254, unique=True)
+    content = models.TextField(null=True, blank=True)
     
     class Meta:
         verbose_name_plural = 'Dates'
