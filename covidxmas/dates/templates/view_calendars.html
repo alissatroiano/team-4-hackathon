@@ -41,13 +41,21 @@
 													href="{% url 'edit_dates' calendar_id=calendar.unique_id %}">Edit
 												</a></button>
 										</li>
-										<li>
+										<li class="mx-2">
 											<button class="btn-sm">
 												<a role="button"
 													href="{% url 'calendar' calendar_id=calendar.unique_id %}">View</a>
 											</button>
 										</li>
-
+										<li>
+											<div class="fb-share-button"
+												data-href="{% url 'calendar' calendar_id=calendar.unique_id %}"
+												data-layout="button" data-size="small">
+												<a target="_blank"
+													href="{% url 'calendar' calendar_id=calendar.unique_id %}"
+													class="fb-xfbml-parse-ignore">Share</a>
+											</div>
+										</li>
 									</ul>
 								</div>
 							</div>
