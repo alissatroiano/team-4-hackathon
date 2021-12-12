@@ -3,34 +3,35 @@
 
 {% if formset %}
 <section class="mt-3 mb-5">
-	<div class="container">
+    <div class="container">
         <form method="POST">
-            {{ formset.management_form }} 
+            {{ formset.management_form }}
             {% csrf_token %}
             <button type="submit" class="btn btn-primary btn-sm">Save</button>
-		{% for form in formset %}
-        {% if forloop.counter == 1 %}
-        <div class="row">
-        {% endif %}
-            {{form.id.as_hidden}}
-            <div class="col-lg-3 p-3">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="day-display">Day {{forloop.counter}}</span>
+            {% for form in formset %}
+            {% if forloop.counter == 1 %}
+            <div class="row">
+                {% endif %}
+                {{form.id.as_hidden}}
+                <div class="col-lg-3 p-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="day-display">Day {{forloop.counter}}</span>
+                        </div>
+                        {{ form.gift }}
                     </div>
-                    {{ form.gift }}
+                    <input type="hidden" name="form-{{forloop.counter0}}-date" value="{{forloop.counter}}">
+                    {{ form.content }}
                 </div>
-                <input type="hidden" name="form-{{forloop.counter0}}-date" value="{{forloop.counter}}">
-                {{ form.content }}
+                {% if forloop.last %}
             </div>
-        {% if forloop.last %}
-        </div>
-        {% elif forloop.counter|divisibleby:4 %}
-        </div><div class="row">
+            {% elif forloop.counter|divisibleby:4 %}
+    </div>
+    <div class="row">
         {% endif %}
-		{% endfor %}
+        {% endfor %}
         </form>
-	</div>
+    </div>
 </section>
 
 {% endif %}

@@ -47,30 +47,9 @@ def view_calendars(request):
     return render(request, 'view_calendars.html', {'calendars': calendars})
 
 
-
-def view_calendar(request, calendar_id):
-    """ A view to show individual product details """
-
-    calendar = get_object_or_404(Calendar, unique_id=calendar_id)
-
-    context = {
-        'calendar': calendar,
-    }
-
-    return render(request, 'view_calendar.html', context)
-
-
-def view_calendar(request, calendar_id):
-    """ A view to return a specific calendar """
-    calendar = get_object_or_404(Calendar, unique_id=calendar_id)
-    
-    return render(request, 'view_calendar.html', {'calendar': calendar})
-
-
-
 # The edit calendar view is currently broken :(
 @login_required
-def edit_calendar(request, calendar_id):
+def edit_dates(request, calendar_id):
     """ A view to edit an existing calendar """
     calendar = get_object_or_404(Calendar, unique_id=calendar_id)
     CalendarFormSet = modelformset_factory(
@@ -89,5 +68,3 @@ def edit_calendar(request, calendar_id):
             formset = CalendarFormSet(queryset=Date.objects.filter(calendar=calendar))
             return render(request, 'edit_dates.html', {'formset': formset})
         
-        
-

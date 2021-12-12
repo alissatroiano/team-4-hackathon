@@ -38,19 +38,13 @@
 										<li>
 											<button class="btn-sm">
 												<a class=""
-													href="{% url 'edit_calendar' calendar_id=calendar.unique_id %}">View
+													href="{% url 'edit_dates' calendar_id=calendar.unique_id %}">Edit
 												</a></button>
 										</li>
 										<li>
 											<button class="btn-sm">
 												<a role="button"
-													href="{% url 'view_calendar' calendar_id=calendar.unique_id %}">Edit</a>
-											</button>
-										</li>
-										<li>
-											<button class="btn-sm">
-												<a role="button"
-													href="{% url 'view_calendar' calendar_id=calendar.unique_id %}">Delete</a>
+													href="{% url 'calendar' calendar_id=calendar.unique_id %}">View</a>
 											</button>
 										</li>
 
