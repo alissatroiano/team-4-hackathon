@@ -1,0 +1,251 @@
+[
+    {
+        "model": "dates.calendar",
+        "pk": "7253430b-5954-48bb-951c-dae4d1f25206",
+        "fields": {
+            "user": 2,
+            "name": "Elf Advent Calendar",
+            "days": 24
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 3,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 1,
+            "content": "Hiiiii, I hope you enjoy your own Christmas Calendar!!"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 4,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "2",
+            "date": 2,
+            "content": "https://www.youtube.com/embed/r1d_rtzNYpQ"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 5,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "1",
+            "date": 3,
+            "content": "https://www.irishexaminer.com/cms_media/module_img/97/48755_1_articlelarge_bn-965676_be0508ce28da44d8a01b646eb5bb0809.jpg"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 6,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 4,
+            "content": "Christmas is the season of joy, of gift-giving, and of families united."
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 7,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "1",
+            "date": 5,
+            "content": "https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2018/11/07105321/Elf1.jpg"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 8,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 6,
+            "content": "Like snowflakes, my Christmas memories gather and dance—each beautiful, unique, and gone too soon."
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 9,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "2",
+            "date": 7,
+            "content": "https://www.youtube.com/embed/-Zhy_5aD7ks"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 10,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 8,
+            "content": "“What is Christmas? It is the tenderness of the past, courage for the present, and hope for the future.\""
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 11,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "1",
+            "date": 9,
+            "content": "https://christmasfm.com/wp-content/uploads/2020/12/elf5.jpg"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 12,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "2",
+            "date": 10,
+            "content": "https://www.youtube.com/embed/DS8MegEiKLk"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 13,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "1",
+            "date": 11,
+            "content": "https://parade.com/wp-content/uploads/2018/12/FerrellSufferedSugarHeadaches-FTR.jpg"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 14,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 12,
+            "content": "“One of the most glorious messes in the world is the mess created in the living room on Christmas Day.\""
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 15,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "1",
+            "date": 13,
+            "content": null
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 16,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "1",
+            "date": 14,
+            "content": "https://www.rollingstone.com/wp-content/uploads/2013/12/jon-favreau-elf.jpg"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 17,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 15,
+            "content": "\"The best of all gifts around any Christmas tree: the presence of a happy family all wrapped up in each other.\""
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 18,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "1",
+            "date": 16,
+            "content": "https://wallpaperaccess.com/full/193433.jpg"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 19,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "2",
+            "date": 17,
+            "content": "https://www.youtube.com/embed/9jyCfRHumHU"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 20,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 18,
+            "content": "\"I don't think Christmas is necessarily about things. It's about being good to one another.\""
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 21,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "2",
+            "date": 19,
+            "content": "https://www.youtube.com/embed/HNJdxfnZtAI"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 22,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 20,
+            "content": "“Christmas may be a day of feasting, or of prayer, but always it will be a day of remembrance—a day in which we think of everything we have ever loved.”"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 23,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 21,
+            "content": "DESIGN: EMILY SCHIFF-SLATER\r\n\"Christmas isn't a season. It's a feeling.\""
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 24,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "1",
+            "date": 22,
+            "content": "https://m.media-amazon.com/images/M/MV5BMTg3NzI4MTQyOV5BMl5BanBnXkFtZTgwMjIzMzU2MzE@._V1_.jpg"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 25,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "2",
+            "date": 23,
+            "content": "https://www.youtube.com/embed/65fI6MJjlsE"
+        }
+    },
+    {
+        "model": "dates.date",
+        "pk": 26,
+        "fields": {
+            "calendar": "7253430b-5954-48bb-951c-dae4d1f25206",
+            "gift": "3",
+            "date": 24,
+            "content": "\"I will honor Christmas in my heart, and try to keep it all the year.\""
+        }
+    }
+]
