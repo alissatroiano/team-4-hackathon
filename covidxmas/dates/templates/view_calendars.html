@@ -11,10 +11,10 @@
 			</div>
 		</div>
 
-        <div class="row">
-            <div class="col">
-                <a role="button" class="btn btn-primary" href="{% url 'create_calendar' %}">Create New Calendar</a>
-            </div>
+		<div class="row">
+			<div class="col-12 text-center">
+				<a role="button" class="btn btn-primary" href="{% url 'create_calendar' %}">Create New Calendar</a>
+			</div>
 		</div>
 
 		<div class="row">
@@ -27,10 +27,38 @@
 					</div>
 					<div class="card-body">
 						<div class="row text-center">
-							<p>{{ calendar.days }} days</p>
+							<div class="col-12">
+								<p>{{ calendar.days }} days</p>
+							</div>
 						</div>
-						<div class="row justify-content-center">
-                            <a class="btn" href="{% url 'edit_calendar' calendar_id=calendar.unique_id %}">Edit Calendar</a>
+						<div class="card-footer">
+							<div class="row justify-content-center text-center d-inline-block">
+								<div class="col-12">
+									<ul class="list-group list-group-horizontal mx-auto">
+										<li>
+											<button class="btn-sm">
+												<a class=""
+													href="{% url 'edit_dates' calendar_id=calendar.unique_id %}">Edit
+												</a></button>
+										</li>
+										<li class="mx-2">
+											<button class="btn-sm">
+												<a role="button"
+													href="{% url 'calendar' calendar_id=calendar.unique_id %}">View</a>
+											</button>
+										</li>
+										<li>
+											<div class="fb-share-button"
+												data-href="{% url 'calendar' calendar_id=calendar.unique_id %}"
+												data-layout="button" data-size="small">
+												<a target="_blank"
+													href="{% url 'calendar' calendar_id=calendar.unique_id %}"
+													class="fb-xfbml-parse-ignore">Share</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -39,6 +67,6 @@
 			{% endif %}
 		</div>
 	</div>
-	</div>
+
 </section>
 {% endblock %}

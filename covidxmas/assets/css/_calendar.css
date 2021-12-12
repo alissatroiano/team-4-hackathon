@@ -52,6 +52,14 @@
     transform: rotateY(-120deg);
 }
 
+.day.inactive-day{
+    opacity: .7;
+}
+
+.day.inactive-day:hover .cover {
+    transform: none;
+    cursor: not-allowed;
+}
 
 /* Small tiles 1 x 1 */
 

@@ -10,7 +10,7 @@ class DateAdmin(admin.ModelAdmin):
         'calendar', 
         'date', 
         'gift', 
-        'content'
+        'content',
 	]
     list_filter = ['calendar',]
     search_fields = ['date', 'calendar__name']
@@ -24,6 +24,8 @@ class CalendarAdmin(admin.ModelAdmin):
      'user',
      'name',
      'days',
+     'year',
+     'is_public',
 	]
  
 	list_filter = ['user',]
@@ -31,5 +33,5 @@ class CalendarAdmin(admin.ModelAdmin):
 	search_fields = ['name', 'user']
  
 	fields = [
-     'name', 'user', 'days'
+     'name', 'user', 'days', 'year', 'is_public',
 	]

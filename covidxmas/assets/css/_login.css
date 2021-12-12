@@ -1,0 +1,88 @@
+
+.signin-container {
+    backdrop-filter: blur(30px);
+}
+
+.login {
+    width: 50%;
+}
+
+.login p {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.login p:nth-of-type(1),
+.login p:nth-of-type(2) {
+    flex-direction: column;
+}
+
+.login label {
+    font-weight: 700;
+    border: none;
+    text-align: left;
+    width: 200px;
+    padding-left: 0;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    padding: 0.2rem;
+    width: 100%;
+    font-weight: 700;
+    border: 1px solid var(--nav-colour);
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    outline: 2.5px solid var(--primary-colour);
+    
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}
+
+.forgot-password {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-colour);
+}
+
+.forgot-password:hover {
+    color: var(--nav-colour);
+}
+
+.login-btn {
+    background-color: var(--primary-colour);
+    border: none;
+    color: white;
+    font-weight: 700;
+    transition: all 0.1s ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: var(--nav-colour);
+}
+
+.snowflake-icon {
+    animation: spin 10000ms infinite linear;
+    color: white;
+}
+
+@keyframes spin {
+        0% {
+            transform:rotate(0deg);
+        }
+       100% {
+            transform:rotate(360deg);
+        }
+    }
+
+@media screen and (max-width: 767px) {
+    .login {
+        width: 80%;
+    }
+}
