@@ -11,10 +11,10 @@
 			</div>
 		</div>
 
-        <div class="row">
-            <div class="col">
-                <a role="button" class="btn btn-primary" href="{% url 'create_calendar' %}">Create New Calendar</a>
-            </div>
+		<div class="row">
+			<div class="col">
+				<a role="button" class="btn btn-primary" href="{% url 'create_calendar' %}">Create New Calendar</a>
+			</div>
 		</div>
 
 		<div class="row">
@@ -30,7 +30,20 @@
 							<p>{{ calendar.days }} days</p>
 						</div>
 						<div class="row justify-content-center">
-                            <a class="btn" href="{% url 'edit_calendar' calendar_id=calendar.unique_id %}">Edit Calendar</a>
+							<div class="col-6">
+								{% if calendar %}
+								<a role="button" class="btn btn-primary"
+									href="{% url 'view_calendar' calendar_id=calendar.unique_id %}">View</a>
+								{% endif %}
+								<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+									<button type="button" class="btn btn-danger"> <a class="btn"
+											href="{% url 'edit_calendar' calendar_id=calendar.unique_id %}">Edit
+											Calendar</a>
+									</button>
+									<button type="button" class="btn btn-warning">Middle</button>
+									<button type="button" class="btn btn-success">Right</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

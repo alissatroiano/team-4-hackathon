@@ -1,5 +1,6 @@
 from django.core.files.base import ContentFile
 from django.db.models.fields import PositiveBigIntegerField
+from django.http import request
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
@@ -44,6 +45,27 @@ def view_calendars(request):
     """ A view to return all calendars """
     calendars = Calendar.objects.filter(user=request.user)    
     return render(request, 'view_calendars.html', {'calendars': calendars})
+
+
+
+def view_calendar(request, calendar_id):
+    """ A view to show individual product details """
+
+    calendar = get_object_or_404(Calendar, unique_id=calendar_id)
+
+    context = {
+        'calendar': calendar,
+    }
+
+    return render(request, 'view_calendar.html', context)
+
+
+def view_calendar(request, calendar_id):
+    """ A view to return a specific calendar """
+    calendar = get_object_or_404(Calendar, unique_id=calendar_id)
+    
+    return render(request, 'view_calendar.html', {'calendar': calendar})
+
 
 
 # The edit calendar view is currently broken :(
