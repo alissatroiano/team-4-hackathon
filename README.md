@@ -38,14 +38,14 @@
 + [Media](#media)
 
 # CovidXmas Calendar
-+ We offer a personalized xmasy calendar with the theme of Happy Holidays with coXmas touch! This was built by team THE CALENDERERS for the Code Institute December 2021 Hackathon.
++ We offer a personalized advent calendar with the theme of Happy Holidays with coXmas touch! This was built by team THE CALENDERERS for the Code Institute December 2021 Hackathon.
 It was built to reflect the merry season spirit to our audience, with a simple but effective design that consists of animated combination on each day of December, 
 specifically picked to inspire and uplift the user after COVID-19, global restrictions and two years of hardship.
 
 <img src="#"> 
 
 
-Click [here](#) to live site.  
+Click [here](https://covidxmas.herokuapp.com/) to live site.  
 
 ## UX
 
@@ -53,9 +53,9 @@ Click [here](#) to live site.
 
 + As a user, I would like to be able to …
 
-1. Create, read, write personal events with CovidXmas Calendar;
-2. Have an option to upload any desired image - to be displayed on a chosen day of the calendar.
-3. Listen to my favourite playlist.
+1. Create, edit, share or delete multiple customized Advent Calendars;
+2. Each day of the calendar has an option to either enter an image, youtube video or a text quote;
+3. Listen to songs from the playlist that can be accessed from the navbar option named "Play Music".
 
 + As a site owner, I want…
 
@@ -76,8 +76,8 @@ Wireframes created with Balsamique. The project was developed from initial wiref
 
 ### Navbar 
 
-+ Fixed Navbar with Home, About, Sign In and Sign Out buttons to simmplify accessibility to all pages. 
-+ Collapsed navbar on smaller devices to wrap in all options and assure better navbar design. *need to confirm with the team?
++ Fixed Navbar with Home, About, Sign In and Sign Out buttons to simplify accessibility to all pages. 
++ Collapsed navbar on smaller devices to wrap in all options to ensure smoooth adjustment of menu being displayed.
 
 
 
@@ -124,6 +124,8 @@ Wireframes created with Balsamique. The project was developed from initial wiref
    + CSS3
    + JavaScript
    + Python3
+   + SVG
+   + JSON
 
  ### Frameworks Libraries and Programs Used
 
@@ -245,7 +247,8 @@ Quotes (both Christmas-themed and non-Christmas themed) for the advent calendar 
 
 ### Media
 
-placeholder text
+Images from [Vecteezy](https://www.vecteezy.com)
+
 
 
 
