@@ -12,6 +12,14 @@ GIFT = (
         ('3', 'Quote'),
 )
 
+YEARS = (
+    (2021, 2021),
+    (2022, 2022),
+    (2023, 2023),
+    (2024, 2024),
+    (2025, 2025),
+)
+
 class Calendar(models.Model): 
     """ 
     A unique calendar for each user, containing a unique id
@@ -20,6 +28,8 @@ class Calendar(models.Model):
     unique_id = models.UUIDField(default=uuid.uuid4, max_length=100, unique=True, primary_key=True)
     name = models.CharField(max_length=254)
     days = models.IntegerField(default=0, choices=[(24, 24 ), (25, 25)])
+    year = models.IntegerField(default=2021, choices=YEARS)
+    is_public = models.BooleanField(default=False)
     
     def __str__(self):
         return self.name
