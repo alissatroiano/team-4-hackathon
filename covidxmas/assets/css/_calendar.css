@@ -21,15 +21,9 @@
     font-weight: 900;
 }
 
-
-
 .day{
     z-index: 1;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/gift.svg);
-    background-repeat: no-repeat;
-    justify-content: center;
-    background-size: contain;
-    background-position: center center;
+    background-color: #f5f5f5;
 }
 
 /* Calendar tile styling */
@@ -46,7 +40,6 @@
 
 .day:hover {
     z-index: 10;
-    border
   }
   
 .day:hover .cover {
