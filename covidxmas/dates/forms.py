@@ -8,7 +8,7 @@ class DateForm(ModelForm):
 		fields = ['date', 'content', 'gift']
 
 
-class CalendarForm(ModelForm):
+class EditCalendarForm(ModelForm):
     class Meta:
         model = Calendar
         fields = ['user', 'name', 'days']

@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 from django.forms.models import modelformset_factory
 from .models import Date, Calendar
-from .forms import CalendarForm, DateForm
+from .forms import EditCalendarForm, DateForm
 
 # Create your views here.
 def create_calendar(request):
@@ -28,16 +28,13 @@ def view_calendars(request):
 def edit_calendar(request, calendar_id):
     """ A view to edit an existing calendar """
     calendar = get_object_or_404(Calendar, pk=calendar_id)
+    formset = modelformset_factory(Calendar, form=EditCalendarForm, extra=1)
     
-    if request.method == 'POST':
-        formset = CalendarForm(request.PositiveBigIntegerField, request.POST, instance=calendar)
+    if request.method == 'GET':
+        formset = EditCalendarForm(request.POST, instance=calendar)
         if formset.is_valid():
             formset.save()
-            return redirect(reverse('view_calendars'))
-    
-    context = {
-        'formset': formset,
-        'calendar': calendar,
-    }
-    
-    return render('edit_calendar.html', request, context)
+        return redirect(reverse('view_calendars'))
+    else:
+        return render(request, 'edit_calendar.html', {'formset': formset})
+
