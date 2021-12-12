@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
+
+from dates.models import Calendar
 
 
 def home(request):
@@ -6,7 +8,8 @@ def home(request):
 
 
 def calendar(request, calendar_id):
-    return render(request, 'calendar.html')
+    calendar = get_object_or_404(Calendar, unique_id=calendar_id)
+    return render(request, 'calendar.html', {'calendar': calendar})
 
 
 def calendar_start(request):
