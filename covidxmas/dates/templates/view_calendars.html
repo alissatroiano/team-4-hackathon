@@ -1,0 +1,46 @@
+{% extends 'base_template.html' %}
+
+
+{% block content %}
+
+
+<section class="calendar mt-5 pt-5">
+	<!--container-->
+	<div class="container">
+		<!--row-->
+		<div class="row">
+			<!--col-12-->
+			{% if calendars %}
+			<div class="col-12 mt-5 pt-5">
+				{{ user }}'s calendars
+			</div>
+			{% endif %}
+			<!--/col-12-->
+		</div>
+		<!--/row-->
+		<!--calendars-display-row-->
+		<div class="row">
+			<!--col-xs-8.col-md-4-->
+			<div class="col-xs-8 col-md-4">
+				<!--calendar-display-->
+				{% for calendar in calendars %}
+				<div class="card">
+					<div class="card-title">
+						<h1>{{ calendar.name }}</h1>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<!--/col-xs-8.col-md-4-->
+		</div>
+		<!--/calendars-display-row-->
+	</div>
+	<!--row-->
+	</div>
+	<!--/container-->
+	</div>
+</section>
+
+
+
+{% endblock %}
