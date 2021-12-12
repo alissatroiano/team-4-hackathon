@@ -1,28 +1,50 @@
 {% extends 'base_template.html' %}
-
-
 {% block content %}
 
-{% if formset %}
-<section class="mt-5 pt-5">
-	<div class="calendar-container container">
-		{% for form in formset %}
-		<div class="card day day{{ forloop.counter }}">
+<section class="mt-3 mb-5">
+	<div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Create New Advent Calendar</h3>
+            </div>
+        </div>
 
-			<div class="cover cover{{ forloop.counter }}">{{ forloop.counter }}
-			</div>
-			<div>
-				<span>{{ form.date }}</span>
-				<span>{{ form.gift }}</span>
-				<span>{{ form.content }}</span>
-			</div>
-		</div>
-		<!--./day-->
-		{% endfor %}
+        <div class="row">
+            <div class="col">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <form method="POST" class="w-50">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{request.user.id}}" name="user">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="name_lbl">Calendar Name</span>
+                                </div>
+                                {{form.name}}
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="name_lbl"># Days</span>
+                                </div>
+                                {{form.days }}
+                            </div>
+
+                            <div class="input-group">
+                                <button class="btn btn-primary" type="submit">Create</button>
+                            </div>
+                            
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
 	</div>
-	<!--./end-calendar-container-->
 </section>
-
-{% endif %}
 
 {% endblock %}
