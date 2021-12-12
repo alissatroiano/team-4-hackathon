@@ -23,6 +23,7 @@
     border: none;
     text-align: left;
     width: 200px;
+    padding-left: 0;
 }
 
 .login input[type="text"],
