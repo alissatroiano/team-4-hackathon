@@ -1,6 +1,6 @@
 
 .signin-container {
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(30px);
 }
 
 .login {
@@ -42,6 +42,11 @@
 .forgot-password {
     font-weight: 700;
     text-decoration: none;
+    color: var(--primary-colour);
+}
+
+.forgot-password:hover {
+    color: var(--nav-colour);
 }
 
 .login-btn {
