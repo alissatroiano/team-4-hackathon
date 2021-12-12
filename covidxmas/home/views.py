@@ -5,7 +5,7 @@ def home(request):
     return render(request, 'index.html')
 
 
-def calendar(request):
+def calendar(request, calendar_id):
     return render(request, 'calendar.html')
 
 

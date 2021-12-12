@@ -36,7 +36,17 @@
     51% {
         transform: rotateY(0deg);
     }
-    99% {
+    75% {
+        bottom: 40%;
+        left: 85%;
+        transform: rotateY(0deg);
+    }
+    78% {
+        bottom: 40%;
+        left: 85%;
+        transform: rotateY(180deg);
+    }
+    100% {
         transform: rotateX(0deg);
     }
 }
