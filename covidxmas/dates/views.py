@@ -39,9 +39,6 @@ def create_calendar(request):
             print(form.errors)
             return render(request, 'create_calendar.html', {'form': form})
 
-        
-
-
 
 def view_calendars(request):
     """ A view to return all calendars """

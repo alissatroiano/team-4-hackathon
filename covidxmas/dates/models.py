@@ -19,7 +19,7 @@ class Calendar(models.Model):
     user = models.ForeignKey(User, related_name='calendars', on_delete=models.CASCADE)
     unique_id = models.UUIDField(default=uuid.uuid4, max_length=100, unique=True, primary_key=True)
     name = models.CharField(max_length=254)
-    days = models.IntegerField(default=0, choices=[(24, 24 ), (25, 25) ])
+    days = models.IntegerField(default=0, choices=[(24, 24 ), (25, 25)])
     
     def __str__(self):
         return self.name
