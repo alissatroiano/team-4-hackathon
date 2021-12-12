@@ -29,6 +29,14 @@
 .login input[type="password"] {
     padding: 0.2rem;
     width: 100%;
+    font-weight: 700;
+    border: 1px solid var(--nav-colour);
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    outline: 2.5px solid var(--primary-colour);
+    
 }
 
 .forgot-password {
