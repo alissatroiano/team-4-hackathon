@@ -4,6 +4,7 @@ from .models import Calendar, Date
 
 class DateForm(forms.ModelForm):
     content = forms.CharField(
+        required=False,
         widget=forms.Textarea(attrs={
             'rows':2,
             'width':'100%',

@@ -45,8 +45,7 @@ def create_calendar(request):
 
 def view_calendars(request):
     """ A view to return all calendars """
-    calendars = Calendar.objects.all()
-    
+    calendars = Calendar.objects.filter(user=request.user)    
     return render(request, 'view_calendars.html', {'calendars': calendars})
 
 
@@ -55,7 +54,6 @@ def view_calendars(request):
 def edit_calendar(request, calendar_id):
     """ A view to edit an existing calendar """
     calendar = get_object_or_404(Calendar, unique_id=calendar_id)
-    print(calendar.unique_id)
     CalendarFormSet = modelformset_factory(
         Date, fields=('date', 'gift', 'content'),
         form=DateForm, extra=0)
@@ -65,11 +63,11 @@ def edit_calendar(request, calendar_id):
         return render(request, 'edit_dates.html', {'formset': formset})
     else:
         formset = CalendarFormSet(request.POST, queryset=Date.objects.filter(calendar=calendar))
-        print(formset.errors)
         if formset.is_valid():
             formset.save()
             return redirect(reverse('view_calendars'))
         else:
+            formset = CalendarFormSet(queryset=Date.objects.filter(calendar=calendar))
             return render(request, 'edit_dates.html', {'formset': formset})
         
         
