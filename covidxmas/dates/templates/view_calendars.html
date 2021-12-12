@@ -31,23 +31,33 @@
 								<p>{{ calendar.days }} days</p>
 							</div>
 						</div>
-						<div class="card-footer d-block">
-							<ul class="list-group list-group-horizontal">
-								<li>
-									<button class="btn-sm">
-										<a class="" href="{% url 'edit_calendar' calendar_id=calendar.unique_id %}">Edit
-											Calendar</a></button>
-								</li>
-								<li>
-									<button class="btn-sm">
-										<a role="button"
-											href="{% url 'view_calendar' calendar_id=calendar.unique_id %}">View</a>
-									</button>
-								</li>
+						<div class="card-footer">
+							<div class="row justify-content-center text-center d-inline-block">
+								<div class="col-12">
+									<ul class="list-group list-group-horizontal mx-auto">
+										<li>
+											<button class="btn-sm">
+												<a class=""
+													href="{% url 'edit_calendar' calendar_id=calendar.unique_id %}">View
+												</a></button>
+										</li>
+										<li>
+											<button class="btn-sm">
+												<a role="button"
+													href="{% url 'view_calendar' calendar_id=calendar.unique_id %}">Edit</a>
+											</button>
+										</li>
+										<li>
+											<button class="btn-sm">
+												<a role="button"
+													href="{% url 'view_calendar' calendar_id=calendar.unique_id %}">Delete</a>
+											</button>
+										</li>
 
-							</ul>
+									</ul>
+								</div>
+							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
