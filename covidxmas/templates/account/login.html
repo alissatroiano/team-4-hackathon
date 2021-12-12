@@ -21,7 +21,8 @@
       <div class="button-container w-100 text-center">
         <button class="mt-4 w-50 p-2 login-btn primaryAction rounded-2" type="submit">{% trans "Sign In" %}</button>
       </div>
-      <a class="text-center mt-4 button secondaryAction forgot-password" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+      <a class="text-center mt-4 button secondaryAction forgot-password" href="">{% trans "Don't have an account?" %}</a>
+      <a class="text-center button secondaryAction forgot-password" href="{% url 'account_reset_password' %}">{% trans "I've forgotten my password" %}</a>
     </form>
   </div>
 
