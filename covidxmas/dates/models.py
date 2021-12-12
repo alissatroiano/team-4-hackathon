@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 import uuid
 from django.utils import timezone
 
+from datetime import datetime
+
 now = timezone.now
 
 
@@ -54,3 +56,10 @@ class Date(models.Model):
     
     def __str__(self):
         return self.date.strftime('%d %b %Y')
+    
+    def can_be_opened(self):
+        date = datetime(year=self.calendar.year, month=12, day=self.date)
+        if date <= datetime.now():
+            return True
+        return False
+
