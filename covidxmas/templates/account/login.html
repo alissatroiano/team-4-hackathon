@@ -7,7 +7,7 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-  <div class="container signin-container rounded-3 p-2 d-flex flex-column align-items-center justify-content-center mt-4">
+  <div class="container signin-container rounded-3 p-2 d-flex flex-column align-items-center justify-content-center mt-4 pb-4">
     <h1 class="text-center text-uppercase fw-bold fs-3">{% trans "Sign in" %}</h1>
     <form class="login d-flex justify-content-start flex-column" method="POST" action="{% url 'account_login' %}">
       {% csrf_token %}
