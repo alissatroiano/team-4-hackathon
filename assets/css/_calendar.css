@@ -7,7 +7,6 @@
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 1rem;
     padding: 50px;
-    padding-top: 12rem;
     margin: auto;
     max-width: 800px;
 }
@@ -128,7 +127,6 @@
     font-size: 3em;
     align-items: center;
     justify-content: center;
-    filter: brightness(50%);
 }
 
 
