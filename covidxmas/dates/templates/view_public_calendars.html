@@ -1,0 +1,30 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+<section class="calendar">
+
+    <div class="container">
+        <div class="row">
+            {% for calendar in calendars %}
+            <div class="col-md-4">
+
+                <div class="card">
+                    <div class="card-title m-0">
+                        <a href="{% url 'calendar' calendar_id=calendar.unique_id %}">
+                            <h3 class="m-0 mt-3 p-0">{{calendar.name}}</h3>
+                        </a>
+                    </div>
+                    <div class="card-body p-0 pb-3">
+                        {{calendar.days}} days | {{calendar.year}}
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
