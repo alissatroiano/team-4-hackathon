@@ -48,8 +48,6 @@ header {
 }
 
 .dropdown-item {
-    /*
-    color: var(--primary-colour-hover) !important;*/
     font-weight: 700;
     text-transform: capitalize;
     color: white;
