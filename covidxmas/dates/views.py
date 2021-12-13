@@ -79,7 +79,16 @@ def edit_dates(request, calendar_id):
         else:
             formset = CalendarFormSet(queryset=Date.objects.filter(calendar=calendar))
             return render(request, 'edit_dates.html', {'formset': formset})
-        
+
+
+@login_required
+def delete_calendar(request, calendar_id):
+    calendar = get_object_or_404(Calendar, unique_id=calendar_id)
+    
+    if request.user == calendar.user:
+        calendar.delete()
+        return redirect(reverse('view_calendars'))
+
 
 def view_public_calendars(request):
     calendars = Calendar.objects.filter(is_public=True).order_by('?')
