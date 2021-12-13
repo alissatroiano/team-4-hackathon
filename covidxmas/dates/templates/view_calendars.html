@@ -28,59 +28,57 @@
 					<div class="card-body">
 						<div class="row text-center">
 							<div class="col-12">
-								<p class="m-0">{{ calendar.days }} days</p> 
+								<p class="m-0">{{ calendar.days }} days</p>
 							</div>
-                            <div class="col-12 mb-2">
-                                <div class="fb-share-button"
-                                data-href="{% url 'calendar' calendar_id=calendar.unique_id %}"
-                                data-layout="button" data-size="small">
-                            </div>
-						</div>
-						<div class="card-footer">
-							<div class="row justify-content-center text-center d-inline-block">
-								<div class="col-12">
-									
-                                    <div class="container m-0 p-0">
-                                        <div class="row m-0 p-0 mb-2">
+							<div class="col-12 mb-2">
+								<div class="fb-share-button"
+									data-href="{% url 'calendar' calendar_id=calendar.unique_id %}" data-layout="button"
+									data-size="small">
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="row justify-content-center text-center d-inline-block">
+									<div class="col-12">
 
-                                            <div class="col-lg-4">
-                                                <button class="btn-sm">
-												<a class=""
-													href="{% url 'edit_dates' calendar_id=calendar.unique_id %}">Edit
-												</a></button>
+										<div class="container m-0 p-0">
+											<div class="row m-0 p-0 mb-2">
+												<ul class="list-group list-group-horizontal">
+													<li>
+														<i class="text-warning fas fa-edit"></i>
+														<a class="fw-bold text-warning text-decoration-none"
+															href="{% url 'edit_dates' calendar_id=calendar.unique_id %}">Edit
+														</a>
 
-                                            </div>
+													</li>
 
-                                            <div class="col-lg-4">
-                                                <button class="btn-sm">
-                                                    <a role="button" 
-                                                        href="{% url 'calendar' calendar_id=calendar.unique_id %}">View</a>
-                                                </button>
-                                            </div>
+													<li class="mx-2">
+														<i class="text-success fas fa-eye"></i>
+														<a class="fw-bold text-success text-decoration-none"
+															role="button"
+															href="{% url 'calendar' calendar_id=calendar.unique_id %}">View</a>
 
-                                            <div class="col-lg-4">
-                                                <button class="btn-sm">
-													<a class="text-danger"
-														href="{% url 'delete_calendar' calendar_id=calendar.unique_id %}">Delete</a>
-												</button>
-                                            </div>
-                                        
-                                        </div>
-                                        <div class="row m-0 p-0">
+													</li>
 
-                                            <div class="col-12">
+													<li>
+														<i class="text-danger fas fa-trash"></i>
+														<a class="fw-bold text-danger text-decoration-none"
+															href="{% url 'delete_calendar' calendar_id=calendar.unique_id %}">Delete</a>
+													</li>
+												</ul>
+											</div>
+											<div class="row m-0 p-0">
 
-                                                <button class="btn-sm">
-                                                    <a role="button" 
-                                                        href="{% url 'settings' calendar_id=calendar.unique_id %}">Settings</a>
-                                                </button>
+												<div class="col-12">
+													<i class="text-secondary fas fa-cogs"></i>
+													<a class="fw-bold text-secondary text-decoration-none" role="button"
+														href="{% url 'settings' calendar_id=calendar.unique_id %}">Settings</a>
 
-                                            </div>
+												</div>
 
-                                            </div>
+											</div>
 
-                                        </div>
-                                    </div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
