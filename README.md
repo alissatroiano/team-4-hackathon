@@ -7,9 +7,9 @@
 
 [Features](#features)
 + [Navbar](#navbar)
-+ [Home Page](#home-page)
-+ [Login In Page](#signin-page)
-+ [Login Out Page](#signout-page)
++ [Home Page](#home-page) 
++ [Login In Page](#login-page)
++ [Login Out Page](#logout-page)
 
 [Technologies Used](#technologies-used)
 + [Languages Used](#languages-used)
@@ -18,16 +18,13 @@
 [Code Validation](#code-validation)
 + [Automated Tests](#automated-tests)
 
-[Project Bugs and Solutions](#project-bugs-and-solutions)
 
 [Deployment](#deployment)
 + [Forking the GitHub Respository](#forking-the-github-repository)
 + [Making a Local Clone](#making-a-local-clone)
-
-[Setup Project] (#setup-project)
++ [Setup Project] (#setup-project)
 + [Create a .py file] (#create-a-.py-file)
-
-[Run Project] (#run-project)
++ [Run Project] (#run-project)
 + [Execute] (#execute)
 
 
@@ -37,7 +34,7 @@
 
 # CovidXmas Calendar
 + We offer a personalized advent calendar with the theme of Happy Holidays with coXmas touch! This was built by team THE CALENDERERS for the Code Institute December 2021 Hackathon.
-It was built to reflect the merry season spirit to our audience, with a simple but effective design that consists of animated combination on each day of December, 
+It was built to reflect the merry season spirit to our app users, with a simple but effective design that consists of animated combination on each day of December, 
 specifically picked to inspire and uplift the user after COVID-19, global restrictions and two years of hardship.
 
 <img src="#"> 
@@ -50,21 +47,20 @@ Click [here](https://covidxmas.herokuapp.com/) to live site.
 ### User Stories
 
 + As a user, I would like to be able to …
-1. Register my own account, login and logout.
+1. Register my own account, login and logout;
 2. Create, edit, share or delete multiple customized Advent Calendars;
 3. Each day of the calendar has an option to either enter an image, youtube video or a text quote;
-4. Listen to songs from the playlist that can be accessed from the navbar option named "Play Music".
+4. Listen to songs from the playlist or upload your own. Playlist can be accessed from the navbar option named "Play Music".
 
-+ As a site owner, I want…
-
-1. The website be easy to navigate;
++ As a site owner, I want …
+1. The website to be easy to navigate;
 2. The functions to be easy accessible;
-3. Cherish each day of the calendar with the users;
+3. User to experience the festive season through interacting with app.
 
 
 ### Wireframes 
 
-Wireframes created with Balsamique. The project was developed from initial wireframes and some modifications were made during the development process to assure better usability. 
+Wireframes created with Figma. The project was developed from initial wireframes and some modifications were made during the development process to assure better usability. 
 
 [Wireframes](https://github.com/alissatroiano/team-4-hackathon/tree/master/assets/wireframes)
 
@@ -74,38 +70,49 @@ Wireframes created with Balsamique. The project was developed from initial wiref
 
 ### Navbar 
 
-+ Fixed Navbar with Home, About, Login In and Log Out buttons to simplify accessibility to all pages. 
++ Fixed Navbar with Home, Public Calendars, Login In and Log Out buttons to simplify accessibility to all pages;
 + Collapsed navbar on smaller devices to wrap in all options to ensure smoooth adjustment of menu being displayed.
-
 
 
 ### Home page 
 
-+ Placeholder text
-+ Placeholder text
-+ Placeholder text
++ animated gif of santa claus reindeer climbing across the page to catch the user's attention;
++ navigation bar on top of the page.
 
-### About Page 
+### Public Calendars
 
-+ Placeholder text
-+ Placeholder text
-+ Placeholder text
++ In this page, user can view calendars which are publicly available.
 
+### My Calendars
+
++ This page is accessible once user has logged in;
++ 
 
 ### Log In page 
 
-+ This page is dedicated for handling user login;
++ This page is dedicated for handling the user authentication;
++ Username and password box:
+ The user is required to input their registered username and password.
 + Remember Me:
  ‘Remember Me’ feature checkbox will allow the user to preserve their logged in status. When the user checks the Remember Me option, then the logged in status is stored in the browser cookies.
 + Forgotten my password:
 If user forgotten the password - user may click link named "I've forgotten my password". Once clicked - user will be redirected to the Reset Password page to input their email address so  the system will send you an e-mail allowing you to reset password.
 
 + Don't have an account?:
-If user does not have an account yet, user may click the link named "Don't have an account?". Once clicked - user will be redirected to the Account creation page.
+If user does not have an account - user may click the link named "Don't have an account? Sign Up". Once clicked - user will be redirected to the signup page.
+
+### Sign Up Page
+
++ This page is dedicated for handling the registration of a new user;
++ The user is required to input their desired username;
++ The user has the option to input their email address;
++ The user is required to input their password twice;
+
 
 ### Log Out Page 
 
 + This page is dedicated for handling user log out;
++ It is accessible upon user login.
 + Once "Log out" is clicked from the navbar; user will be prompted if they want to sign out. Once user confirm - system will sign out the user and return to the homepage.
 
 ## Technologies Used
@@ -121,8 +128,9 @@ If user does not have an account yet, user may click the link named "Don't have 
 
  ### Frameworks Libraries and Programs Used
 
-+ Balsamiq:
-    Balsamiq was used to produce the wireframes throughout the design process.
++ Figma:
+  Figma was used to produce the wireframes throughout the design process.
+
 + Bootstrap 5:
     Bootstrap was used to add style to the website.
 + Git
@@ -167,11 +175,11 @@ Javascript files were tested with the jshint and no errors were been found.
 
   - In the GitHub repository, navigate to the Settings tab; 
   - From the source section drop-down menu, select the Master Branch;
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+  - Once the mas  ter branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
 The live link can be found [here](https://github.com/alissatroiano/team-4-hackathon/).
 
-### Forking the GitHub Repository
+## Forking the GitHub Repository
 
 By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
 
@@ -179,7 +187,7 @@ By forking the GitHub Repository you will be able to make a copy of the original
 2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
 3. You should now have a copy of the original repository in your GitHub account.
 
-### Making a Local Clone
+## Making a Local Clone
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/alissatroiano/team-4-hackathon/)
 2. Under the repository name, click "Clone or download".
