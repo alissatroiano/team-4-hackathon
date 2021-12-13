@@ -4,7 +4,22 @@
 {% block content %}
     <!-- Advent calendar grid section-->
     <section>
+
+        <div class="container ribbon-container">
+            <div class="row">
+                <div class="col">
+
+                    <h1 class="ribbon">
+                        <strong class="ribbon-content">{{calendar.name}}</strong>
+                    </h1>
+
+                </div>
+            </div>
+
+        </div>
+
         <div class="calendar-container">
+
             {% for day in calendar.dates.all %}
             {% if day.can_be_opened %}
             <div class="day day{{forloop.counter}}" data-gift="{{day.gift}}" data-content="{{day.content}}">

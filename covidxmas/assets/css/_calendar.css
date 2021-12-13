@@ -182,3 +182,75 @@
 .coverteam {
     font-size: 1em;
 }
+
+.ribbon {
+    font-size: 2em !important;  
+    width: 50%;
+    position: relative;
+    background: var(--primary-colour);
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 1.5em; 
+    margin: 0 auto 0; 
+}
+
+h1.ribbon strong {
+    color: white;
+}
+
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #ce5146;
+    z-index: -1;
+}
+.ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+.ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #804f7c transparent transparent transparent;
+    bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+
+@media screen and (max-width: 767px) {
+    .ribbon {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ribbon {
+        width: 80%;
+    }
+    .calendar-container {
+        padding: 0;
+        grid-template-columns: inherit;
+    }
+
+    .ribbon-container {
+        margin-bottom: 30px;
+        font-size: 0.8em !important;
+    }
+    
+}

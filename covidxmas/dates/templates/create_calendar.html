@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="POST" class="w-50">
+                        <form method="POST" class="col-md-6" >
                             {% csrf_token %}
                             <input type="hidden" value="{{request.user.id}}" name="user">
                             
