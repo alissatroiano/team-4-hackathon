@@ -1,5 +1,6 @@
 from django import forms
 from .models import Calendar, Date
+from .models import DAYS, YEARS
 
 
 class DateForm(forms.ModelForm):
@@ -23,6 +24,16 @@ class CalendarForm(forms.ModelForm):
             'width':'100%',
             'class': 'form-control',
             'placeholder': 'e.g. Alex\'s Calendar'}))
+    days = forms.ChoiceField(
+        widget=forms.Select(attrs={'class': 'form-control text-center'}),
+        choices=DAYS)
+    year = forms.ChoiceField(
+        widget=forms.Select(attrs={'class': 'form-control text-center'}),
+        choices=YEARS)
+    is_public = forms.ChoiceField(
+        widget=forms.Select(attrs={'class': 'form-control text-center'}),
+        choices=[(False, 'No'), (True, 'Yes')])
+
     class Meta:
         model = Calendar
-        fields = ['user', 'name', 'days']
+        fields = ['user', 'name', 'days', 'year', 'is_public']
