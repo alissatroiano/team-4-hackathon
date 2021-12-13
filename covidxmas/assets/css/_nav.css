@@ -55,10 +55,19 @@ header {
     color: white;
 }
 
+.dropdown-item:hover {
+    background-color: transparent;
+}
+
 .upload label {
     border-radius: 0;
     border: 3px solid white;
     color: white;
+}
+
+.upload label:hover {
+    background: white;
+    color: var(--nav-colour);
 }
 
 .or {
