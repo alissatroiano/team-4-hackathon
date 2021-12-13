@@ -48,9 +48,21 @@ header {
 }
 
 .dropdown-item {
-    color: var(--primary-colour-hover) !important;
+    /*
+    color: var(--primary-colour-hover) !important;*/
     font-weight: 700;
     text-transform: capitalize;
+    color: white;
+}
+
+.upload label {
+    border-radius: 0;
+    border: 3px solid white;
+    color: white;
+}
+
+.or {
+    color: white;
 }
 
 .active .nav-link:hover {
@@ -61,8 +73,19 @@ header {
 .dropdown-menu {
     border: 0;
     background: transparent;
+    overflow-x: scroll;
 }
 
 a.nav-link {
     color: var(--primary-colour) !important;
+}
+
+@media screen and (max-width: 443px) {
+    .navbar-collapse {
+        width: 90%;
+    }
+
+    .dropdown-item {
+        word-wrap: break-word;
+    }
 }
