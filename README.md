@@ -5,7 +5,7 @@
 + [User Stories](#user-stories)
 + [Wireframes](#wireframes)
 
-[Existing Features](#existing-features)
+[Features](#features)
 + [Navbar](#navbar)
 + [Home Page](#home-page)
 + [Login In Page](#signin-page)
@@ -51,9 +51,9 @@ Click [here](https://covidxmas.herokuapp.com/) to live site.
 
 + As a user, I would like to be able to …
 1. Register my own account, login and logout.
-1. Create, edit, share or delete multiple customized Advent Calendars;
-2. Each day of the calendar has an option to either enter an image, youtube video or a text quote;
-3. Listen to songs from the playlist that can be accessed from the navbar option named "Play Music".
+2. Create, edit, share or delete multiple customized Advent Calendars;
+3. Each day of the calendar has an option to either enter an image, youtube video or a text quote;
+4. Listen to songs from the playlist that can be accessed from the navbar option named "Play Music".
 
 + As a site owner, I want…
 
@@ -69,7 +69,7 @@ Wireframes created with Balsamique. The project was developed from initial wiref
 [Wireframes](https://github.com/alissatroiano/team-4-hackathon/tree/master/assets/wireframes)
 
 
-## Existing Features 
+## Features 
 
 
 ### Navbar 
@@ -92,18 +92,21 @@ Wireframes created with Balsamique. The project was developed from initial wiref
 + Placeholder text
 
 
-### Sign In page 
+### Log In page 
 
-+ Placeholder text
-+ Placeholder text
-+ Placeholder text
++ This page is dedicated for handling user login;
++ Remember Me:
+ ‘Remember Me’ feature checkbox will allow the user to preserve their logged in status. When the user checks the Remember Me option, then the logged in status is stored in the browser cookies.
++ Forgotten my password:
+If user forgotten the password - user may click link named "I've forgotten my password". Once clicked - user will be redirected to the Reset Password page to input their email address so  the system will send you an e-mail allowing you to reset password.
 
-### Sign Out Page 
++ Don't have an account?:
+If user does not have an account yet, user may click the link named "Don't have an account?". Once clicked - user will be redirected to the Account creation page.
 
-+ Placeholder text
-+ Placeholder text
-+ Placeholder text
+### Log Out Page 
 
++ This page is dedicated for handling user log out;
++ Once "Log out" is clicked from the navbar; user will be prompted if they want to sign out. Once user confirm - system will sign out the user and return to the homepage.
 
 ## Technologies Used
 
