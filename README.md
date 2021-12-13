@@ -8,10 +8,8 @@
 [Existing Features](#existing-features)
 + [Navbar](#navbar)
 + [Home Page](#home-page)
-+ [Sign In Page](#signin-page)
-+ [Sign Out Page](#signout-page)
-
-[Future Features](#future-features)
++ [Login In Page](#signin-page)
++ [Login Out Page](#signout-page)
 
 [Technologies Used](#technologies-used)
 + [Languages Used](#languages-used)
@@ -52,7 +50,7 @@ Click [here](https://covidxmas.herokuapp.com/) to live site.
 ### User Stories
 
 + As a user, I would like to be able to …
-
+1. Register my own account, login and logout.
 1. Create, edit, share or delete multiple customized Advent Calendars;
 2. Each day of the calendar has an option to either enter an image, youtube video or a text quote;
 3. Listen to songs from the playlist that can be accessed from the navbar option named "Play Music".
@@ -68,7 +66,7 @@ Click [here](https://covidxmas.herokuapp.com/) to live site.
 
 Wireframes created with Balsamique. The project was developed from initial wireframes and some modifications were made during the development process to assure better usability. 
 
-[Wireframes](#)
+[Wireframes](https://github.com/alissatroiano/team-4-hackathon/tree/master/assets/wireframes)
 
 
 ## Existing Features 
@@ -76,7 +74,7 @@ Wireframes created with Balsamique. The project was developed from initial wiref
 
 ### Navbar 
 
-+ Fixed Navbar with Home, About, Sign In and Sign Out buttons to simplify accessibility to all pages. 
++ Fixed Navbar with Home, About, Login In and Log Out buttons to simplify accessibility to all pages. 
 + Collapsed navbar on smaller devices to wrap in all options to ensure smoooth adjustment of menu being displayed.
 
 
@@ -107,15 +105,6 @@ Wireframes created with Balsamique. The project was developed from initial wiref
 + Placeholder text
 
 
-
-## Future Features
-
-+ Placeholder text
-+ Placeholder text
-+ Placeholder text
-
-
-
 ## Technologies Used
 
 ### Languages Used
@@ -123,7 +112,7 @@ Wireframes created with Balsamique. The project was developed from initial wiref
    + HTML5
    + CSS3
    + JavaScript
-   + Python3
+   + Python3/Django
    + SVG
    + JSON
 
@@ -151,10 +140,10 @@ HTML validation results can be viewed on links:
 
 | Pages  |  
 | ------------------- | 
-|  [Index](#) |  
-|  [About](#)|
-|  [SignIn](#) |
-|  [SignOut](#) |
+|  [Index](https://covidxmas.herokuapp.com/) |  
+|  [About](https://covidxmas.herokuapp.com/#about)|
+|  [Log In](https://covidxmas.herokuapp.com/accounts/login/) |
+|  [Log Out](https://covidxmas.herokuapp.com/accounts/logout/) |
 
 + CSS
 
@@ -177,19 +166,19 @@ Javascript files were tested with the jshint and no errors were been found.
   - From the source section drop-down menu, select the Master Branch;
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found [here](URL).
+The live link can be found [here](https://github.com/alissatroiano/team-4-hackathon/).
 
 ### Forking the GitHub Repository
 
 By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](URL)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/alissatroiano/team-4-hackathon/)
 2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
 3. You should now have a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](URL)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/alissatroiano/team-4-hackathon/)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
@@ -197,7 +186,7 @@ By forking the GitHub Repository you will be able to make a copy of the original
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone URL
+$ git clone https://github.com/alissatroiano/team-4-hackathon/
 ```
 
 7. Press Enter. Your local clone will be created.
