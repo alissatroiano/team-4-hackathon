@@ -18,19 +18,46 @@
                         <form method="POST" class="w-50">
                             {% csrf_token %}
                             <input type="hidden" value="{{request.user.id}}" name="user">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="name_lbl">Calendar Name</span>
+                            
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="name_lbl">Calendar Name</span>
+                                            </div>
+                                            {{ form.name}}
+                                        </div>
+                                    </div>
                                 </div>
-                                {{form.name}}
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="name_lbl"># Days</span>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="name_lbl"># Days</span>
+                                            </div>
+                                            {{ form.days }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="name_lbl">Year</span>
+                                            </div>
+                                            {{ form.year }}
+                                        </div>
+                                    </div>
                                 </div>
-                                {{form.days }}
-                            </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="name_lbl">Is Public?</span>
+                                            </div>
+                                            {{ form.is_public }}
+                                        </div>
+                                    </div>
+                                </div>
+                       
 
                             <div class="input-group">
                                 <button class="btn btn-primary" type="submit">Create</button>
