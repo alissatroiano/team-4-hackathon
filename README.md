@@ -51,7 +51,7 @@ Click [here](https://covidxmas.herokuapp.com/) to live site.
 
 Wireframes created with Figma and Balsamiq. The project was developed from initial wireframes and some modifications were made during the development process to assure better usability. 
 
-[Wireframes](https://github.com/alissatroiano/team-4-hackathon/tree/master/assets/wireframes)
+[Wireframes](https://github.com/alissatroiano/team-4-hackathon/tree/master/covidxmas/assets/wireframes)
 
 
 ## Features 
