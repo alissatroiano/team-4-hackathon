@@ -230,6 +230,8 @@ $ git clone https://github.com/alissatroiano/team-4-hackathon/
 ### Create a .py file
 1. Create a `env.py` file in the `covidxmas` folder. See example below.
 
+1. Create a `env.py` file in the `covidxmas` folder. See example of the file contents below.
+
 ```
 import os
 
@@ -237,12 +239,43 @@ os.environ.setdefault('ALLOWED_HOST', '*')
 
 ```
 
-2. Run migrations
-3. Run project
+2. If you have a virtual environment, then start it
 
+3. Install dependencies
 
 ## Run Project
+
 ### Execute
+
+For Bash (Linux/Mac) execute the following line of code from the terminal:
+
+```
+pip3 install -r requirements.txt
+
+```
+
+For Windows execute the following line of code from Powershell
+
+```
+pip install -r requirements.txt
+```
+
+4. Run migrations
+
+For Bash (Linux/Mac) execute the following line of code from the terminal:
+
+```
+python3 covidxmas/manage.py migrate
+
+```
+
+For Windows execute the following line of code from Powershell
+
+```
+python covidxmas/manage.py migrate
+```
+
+5. Run project
 
 For Bash (Linux/Mac) execute the following line of code from the terminal:
 

@@ -1,0 +1,25 @@
+* {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/flakes3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: var(--primary-colour);
+    z-index: 10;
+}

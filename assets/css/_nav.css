@@ -1,22 +1,7 @@
 header {
-    position: absolute;
     z-index: 10;
     width: 100vw;
 }
-
-
-/* Header styling */
-
-
-/* .header-container {
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 60px;
-    margin-top: 20px;
-    margin-left: 20px;
-} */
 
 .logo {
     text-decoration: none;
@@ -26,36 +11,27 @@ header {
     letter-spacing: 2px;
 }
 
-
-/* .navbar {
-    background-image: linear-gradient(180deg, #5793A9, #91C3D0); 
-} */
-
 .navbar-brand {
     letter-spacing: 0.2rem;
+    color: var(--nav-colour) !important;
+    font-weight: 600;
 }
 
 .nav-item {
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 500;
     font-family: 'Montserrat', sans-serif;
 }
 
 .header-img img {
     vertical-align: middle;
-    height: 60px;
+    height: 80px;
     list-style: none;
 }
 
-.navbar-dark .navbar-nav .active>.nav-link {
-    color: var(--primary-colour);
+.navbar-dark .navbar-nav .active>.nav-link .music-icon {
+    color: var(--primary-colour) !important;
 }
-
-
-/* Footer styling */
-
-
-/* Hero styling */
 
 .hero {
     position: relative;
@@ -69,8 +45,28 @@ header {
 .navbar {
     color: var(--nav-colour) !important;
     text-transform: uppercase;
-}
-
-#navmenu {
+    .dropdown-item {
+        color: var(--primary-colour-hover) !important;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    /* .navbar {
+    text-transform: uppercase;
+} */
+    .active .nav-link:hover {
+        background-color: color: var(--primary-colour);
+        color: black !important;
+    }
+    .dropdown-menu {
+        border: 0;
+        background: transparent;
+    }
+    /* .bg-light {
+    background-color: transparent;
+} */
+    /* #navmenu {
     color: #3e3d3d !important;
-}
+} */
+    a.nav-link {
+        color: var(--primary-colour) !important;
+    }

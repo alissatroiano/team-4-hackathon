@@ -1,0 +1,57 @@
+/* Hero styling */
+
+.hero {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+}
+
+.santaclaus {
+    z-index: 600;
+    cursor: pointer;
+    -webkit-animation: MovingSanta 38s infinite linear;
+    -moz-animation: MovingSanta 38s infinite linear;
+    -ms-animation: MovingSanta 38s infinite linear;
+    -o-animation: MovingSanta 38s infinite linear;
+    animation: MovingSanta 38s infinite linear;
+    bottom: 0%;
+    left: 0%;
+    position: absolute;
+}
+
+@keyframes MovingSanta {
+    25% {
+        bottom: 80%;
+        left: 85%;
+        transform: rotateY(0deg);
+    }
+    26% {
+        transform: rotateY(180deg);
+    }
+    50% {
+        bottom: 60%;
+        left: 0%;
+        transform: rotateY(180deg);
+    }
+    51% {
+        transform: rotateY(0deg);
+    }
+    75% {
+        bottom: 40%;
+        left: 85%;
+        transform: rotateY(0deg);
+    }
+    78% {
+        bottom: 40%;
+        left: 85%;
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+
+/***************************
+
+//// END OF MOVING SANTA ///

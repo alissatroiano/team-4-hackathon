@@ -1,0 +1,1 @@
+web: gunicorn --chdir covidxmas covidxmas.wsgi -b 0.0.0.0:$PORT
