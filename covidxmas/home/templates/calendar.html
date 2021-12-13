@@ -19,8 +19,7 @@
         </div>
 
         <div class="calendar-container">
-
-            {% for day in calendar.dates.all %}
+            {% for day in dates %}
             {% if day.can_be_opened %}
             <div class="day day{{forloop.counter}}" data-gift="{{day.gift}}" data-content="{{day.content}}">
             {% else %}
@@ -79,6 +78,8 @@
                 break;
 
             }
+        } else {
+            $('#showCalendarDay .modal-body').html('<h3>Ho, Ho, Ho! Merry Christmas!</h3>');
         }
         $('#showCalendarDay').modal('toggle')
     })

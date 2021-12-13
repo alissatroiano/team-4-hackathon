@@ -9,7 +9,8 @@ def home(request):
 
 def calendar(request, calendar_id):
     calendar = get_object_or_404(Calendar, unique_id=calendar_id)
-    return render(request, 'calendar.html', {'calendar': calendar})
+    dates = calendar.dates.order_by('date')
+    return render(request, 'calendar.html', {'calendar': calendar, 'dates': dates})
 
 
 def calendar_start(request):
