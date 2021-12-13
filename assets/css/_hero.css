@@ -19,6 +19,12 @@
     position: absolute;
 }
 
+.trees {
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+}
+
 @keyframes MovingSanta {
     25% {
         bottom: 80%;
