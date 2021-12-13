@@ -8,19 +8,32 @@ from django.forms.models import modelformset_factory
 from .models import Date, Calendar
 from .forms import CalendarForm, DateForm
 
-# Create your views here.
-def create_dates(request):
+
+@login_required
+def settings(request, calendar_id):
     """ A view to create a new calendar """
+    calendar = get_object_or_404(Calendar, unique_id=calendar_id)
+    previous_days = calendar.days
     if request.method == 'GET':
-        formset = modelformset_factory(Date, form=DateForm, extra=24)
-        return render(request, 'edit_dates.html', {'formset': formset})
+        form = CalendarForm(instance=calendar)
+        return render(request, 'create_calendar.html', {'form': form})
     else:
-        # formset = modelformset_factory(
-        #         Date, fields=('date', 'display_name', 'mentor'),
-        #         form=HackTeamForm, extra=0)
-        return
+        form = CalendarForm(request.POST, instance=calendar)
+        if form.is_valid():
+            calendar = form.save()
+            if previous_days > int(request.POST.get('days')):
+                date = Date.objects.filter(date=25, calendar=calendar)
+                date.delete()
+            elif previous_days < int(request.POST.get('days')):
+                date = Date(calendar=calendar, date=25)
+                date.save()
+            return redirect(reverse('view_calendars'))
+        else:
+            print(form.errors)
+            return render(request, 'create_calendar.html', {'form': form})
 
 
+@login_required
 def create_calendar(request):
     """ A view to create a new calendar """
     if request.method == 'GET':
@@ -36,18 +49,17 @@ def create_calendar(request):
                 Date.objects.create(calendar=calendar, date=day)
             return redirect(reverse('view_calendars'))
         else:
-            print(request.POST)
             print(form.errors)
             return render(request, 'create_calendar.html', {'form': form})
 
 
+@login_required
 def view_calendars(request):
     """ A view to return all calendars """
     calendars = Calendar.objects.filter(user=request.user)    
     return render(request, 'view_calendars.html', {'calendars': calendars})
 
 
-# The edit calendar view is currently broken :(
 @login_required
 def edit_dates(request, calendar_id):
     """ A view to edit an existing calendar """
@@ -68,3 +80,7 @@ def edit_dates(request, calendar_id):
             formset = CalendarFormSet(queryset=Date.objects.filter(calendar=calendar))
             return render(request, 'edit_dates.html', {'formset': formset})
         
+
+def view_public_calendars(request):
+    calendars = Calendar.objects.filter(is_public=True).order_by('?')
+    return render(request, 'view_public_calendars.html', {'calendars': calendars})
