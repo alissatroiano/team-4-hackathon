@@ -27,7 +27,7 @@
 
 .login input[type="text"],
 .login input[type="password"] {
-    padding: 0.2rem;
+    padding: 0.8rem;
     width: 100%;
     font-weight: 700;
     border: 1px solid var(--nav-colour);
