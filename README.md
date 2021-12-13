@@ -15,18 +15,7 @@
 + [Languages Used](#languages-used)
 + [Frameworks, Libraries & Programs Used](#frameworks-libraries-and-programs-used)
 
-[Code Validation](#code-validation)
-+ [Automated Tests](#automated-tests)
-
-
 [Deployment](#deployment)
-+ [Forking the GitHub Respository](#forking-the-github-repository)
-+ [Making a Local Clone](#making-a-local-clone)
-+ [Setup Project] (#setup-project)
-+ [Create a .py file] (#create-a-.py-file)
-+ [Run Project] (#run-project)
-+ [Execute] (#execute)
-
 
 [Credits](#credits)
 + [Content](#content)
@@ -60,7 +49,7 @@ Click [here](https://covidxmas.herokuapp.com/) to live site.
 
 ### Wireframes 
 
-Wireframes created with Figma. The project was developed from initial wireframes and some modifications were made during the development process to assure better usability. 
+Wireframes created with Figma and Balsamiq. The project was developed from initial wireframes and some modifications were made during the development process to assure better usability. 
 
 [Wireframes](https://github.com/alissatroiano/team-4-hackathon/tree/master/assets/wireframes)
 
@@ -128,6 +117,9 @@ If user does not have an account - user may click the link named "Don't have an 
 
  ### Frameworks Libraries and Programs Used
 
++ Balsamiq:
+  Balsamiq was used to produce the wireframes throughout the design process.
+
 + Figma:
   Figma was used to produce the wireframes throughout the design process.
 
@@ -139,32 +131,9 @@ If user does not have an account - user may click the link named "Don't have an 
     GitHub is used to lay in the project's code upon being pushed from Git.
 
 
-## Code Validation
+## Bugs 
 
-### Automated tests
-
-+ HTML
-
-  Passing through the HTML from all templates and base into the W3C Markup Validator no errors or warnings have been found [W3C validator](https://validator.w3.org/).
-
-HTML validation results can be viewed on links:
-
-| Pages  |  
-| ------------------- | 
-|  [Index](https://covidxmas.herokuapp.com/) |  
-|  [About](https://covidxmas.herokuapp.com/#about)|
-|  [Log In](https://covidxmas.herokuapp.com/accounts/login/) |
-|  [Log Out](https://covidxmas.herokuapp.com/accounts/logout/) |
-
-+ CSS
-
-No errors were found when passing through the official [W3C validator](https://jigsaw.w3.org/css-validator/). 
-
-
-[Css](URL)
-+ JavaScript
-
-Javascript files were tested with the jshint and no errors were been found. 
+No bugs were found.
 
 
 ## Deployment
@@ -178,6 +147,60 @@ Javascript files were tested with the jshint and no errors were been found.
   - Once the mas  ter branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
 The live link can be found [here](https://github.com/alissatroiano/team-4-hackathon/).
+
++ Heroku Deployment
+
+ + Prerequisites;
+●	A Github repository
+●	Your creds.json file open in Gitpod.
+●	Ensuring your requirements.txt is up to date. You can do so using by entering the following line in your terminal:
+pip3 freeze --local > requirements.txt
+
+  + Step 1 - Creating an account;
+
+●	If you already have a Heroku account, please sign in to your existing account.
+●	If you don't, go to Heroku.com and create a free account.
+
+  + Step 2: Create an app;
+
+●	Click on the 'New' drop down in the upper right-hand corner.
+●	Select 'Create a new app'.
+●	When choosing an app name, it will need to be unique to Heroku.
+●	If the Github repository name or project name is not available, choose a name similar by adding other words, dashes, letters or numbers.
+●	Enter your chosen 'App name' and select your region.
+●	Click the 'Create app' button.
+
+ + Step 3: Add Config Vars;
+
+●	Go to the 'Settings' tab in your app.
+●	Scroll down to the 'Config Vars' section and click the 'Reveal Config Vars' button.
+●	We are going to add two config vars.
+●	From the creds.json file, copy the entire contents.
+●	Enter CREDS for KEY and then paste the contents from creds.json into the VALUE field.
+●	Then click the 'Add' button.
+●	Enter PORT for KEY and then 8000 for VALUE and click the 'Add' button.
+
++ Step 4: Add Buildpacks;
+
+●	On the same 'Settings' tab in your app, scroll down to the 'Buildpacks' section.
+●	The buildpacks need to be listed in your Settings in a specific order.
+●	It's best to add Python first, click 'Save Changes and repeat for then Node.js.
+●	If the buildpacks don't appear with Python first and Node.js second, you change the order by dragging Python to the top.
+
++ Step 5 - Select Github Deployment Method;
+
+●	Go to the 'Deploy' tab in your app.
+●	In the Deployment method' section, select 'GitHub' and click 'Connect to GitHub'.
+●	Search for your Github repository name, which will create a list of repository names.
+●	Click the 'Connect' button, and your Heroku app will link to your Github repository.
+●	You can choose manual deploys for your app; click 'Deploy Branch' in the 'Manual Deploy' section.
+●	Once successfully deployed, a green tick will appear next to Deploy to Heroku
+●	Your app will not update/rebuild each time you push to Github, which will conserve your dyno hours in Heroku.
+●	You will need to click 'Deploy Branch' each time you want the app to rebuild after pushing your changes to Github.
+●	Or you can choose automatic deploys for your app,
+●	Your app will update/rebuild each time you push to Github, which will not conserve your dyno hours in Heroku
+●	To access your deployed app, scroll to the top and click 'Open app'.
+
 
 ## Forking the GitHub Repository
 
