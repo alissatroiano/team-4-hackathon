@@ -47,7 +47,6 @@ def view_calendars(request):
     return render(request, 'view_calendars.html', {'calendars': calendars})
 
 
-# The edit calendar view is currently broken :(
 @login_required
 def edit_dates(request, calendar_id):
     """ A view to edit an existing calendar """
@@ -68,3 +67,12 @@ def edit_dates(request, calendar_id):
             formset = CalendarFormSet(queryset=Date.objects.filter(calendar=calendar))
             return render(request, 'edit_dates.html', {'formset': formset})
         
+
+@login_required
+def delete_calendar(request, calendar_id):
+    calendar = get_object_or_404(Calendar, unique_id=calendar_id)
+    
+    if request.user == calendar.user:
+        calendar.delete()
+        return redirect(reverse('view_calendars'))
+    
