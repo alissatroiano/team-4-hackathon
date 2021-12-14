@@ -10,13 +10,12 @@
   <h1 class="text-center text-uppercase fw-bold fs-2"><i class="fa fa-snowflake-o snowflake-icon"
       aria-hidden="true"></i>
     {% trans "Sign Out" %}</h1>
-    <i class="fa fa-snowflake-o snowflake-icon" aria-hidden="true"></i>
+  <i class="fa fa-snowflake-o snowflake-icon" aria-hidden="true"></i>
   </h1>
 
   <p class="fw-bold text-center"> {% trans 'Are you sure you want to sign out?' %}</p>
-  
-  <form class="logout d-flex justify-content-start flex-column">
-    <form method="post" action="{% url 'account_logout' %}">
+
+  <form method="post" action="{% url 'account_logout' %}">
     {% csrf_token %}
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
